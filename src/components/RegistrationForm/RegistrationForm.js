@@ -43,7 +43,7 @@ class RegistrationForm extends Component {
     const { error } = this.state
     return (
       <form
-        className='LoginForm'
+        className='RegistrationForm'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
@@ -52,7 +52,7 @@ class RegistrationForm extends Component {
         <div className="un" type="text" align="center" placeholder="John Smith">
           <Label htmlFor='registration-name-input'>
             Enter your name<Required />
-          </Label>
+          </Label> <br></br>
           <Input
             ref={this.firstInput}
             id='registration-name-input'
@@ -82,7 +82,7 @@ class RegistrationForm extends Component {
           />
         </div>
         <footer >
-          <div align="center">
+          <div>
             <Button type='submit'>
               Sign up
             </Button>
