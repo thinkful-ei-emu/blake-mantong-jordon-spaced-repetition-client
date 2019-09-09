@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import UserContext from '../../contexts/UserContext';
+import UserContext from   '../../contexts/UserContext.js'
 import DashboardService from '../../services/dashboard-api-service.js'
+//import Button from '../../components/Button/Button'
 
 class DashboardRoute extends Component {
-  componentWillMount(){
-
+  componentDidMount(){
+     this.fetchData()
   }
   fetchData(){
     DashboardService.getLanguageAndWords()
     .then(data => {
-      console.log(data);
+      UserContext.setLanguage(data);
+      //UserContext.setWords();
     });
   }
   render() {

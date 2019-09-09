@@ -11,6 +11,8 @@ const UserContext = React.createContext({
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
+  languageName: '',
+  words:[],
 })
 
 export default UserContext
@@ -101,7 +103,14 @@ export class UserProvider extends Component {
         this.setError(err)
       })
   }
-
+  setLanguage = (language='') => {
+    console.log(language);
+    this.setState({ language })
+  }
+  setWords =(words=[]) => {
+    console.log(words);
+    this.setState({ words })
+  }
   render() {
     const value = {
       user: this.state.user,
@@ -111,6 +120,10 @@ export class UserProvider extends Component {
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,
+      languageName: this.state.languageName,
+      words:this.state.words,
+      setLanguage: this.setLanguage,
+      setWords:this.setWords,
     }
     return (
       <UserContext.Provider value={value}>
