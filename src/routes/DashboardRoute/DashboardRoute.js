@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import UserContext from '../../contexts/UserContext';
+
 
 class DashboardRoute extends Component {
   render() {
     return (
       <section>
-        implement and style me
+        
       </section>
     );
   }
