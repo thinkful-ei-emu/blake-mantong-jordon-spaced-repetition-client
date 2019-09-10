@@ -1,4 +1,6 @@
 .btn{
+  margin-left: 10px;
+  margin-right: 10px;
   text-shadow: 1px 1px 3px #fff;
   display: inline-block;
   border-radius: 5em;
