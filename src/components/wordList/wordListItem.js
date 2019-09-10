@@ -9,11 +9,16 @@ class listItem extends React.Component{
 
   render(){
     const word = this.props.word;
+    
     return (
-      <div >
-         
+      <div > 
+            
          <h4>{word.original}</h4>
-         <p>correct answer count: {word.correct_count},and incorrect answer count:{word.incorrect_count}</p>
+         
+         <p>correct answer count: {word.correct_count}</p>
+         <p>incorrect answer count: {word.incorrect_count}</p>
+         
+         
       </div>
     )
   }

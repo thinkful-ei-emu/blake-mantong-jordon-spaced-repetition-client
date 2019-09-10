@@ -19,12 +19,26 @@ export class LanguageProvider extends Component {
     }
 
     setLanguage = (language) => {
+        console.log(language)
         this.setState({ language: language });
     }
 
     setWords = (words) => {
+        console.log(words)
         this.setState({ words });
     }
-
-
+    render(){
+        const value ={
+            language:this.state.language,
+            words:this.state.words,
+            setLanguage:this.setLanguage,
+            setWords:this.setWords
+        }
+    
+    return (
+        <LanguageContext.Provider value={value}>
+          {this.props.children}
+        </LanguageContext.Provider>
+    )  
+}  
 }
