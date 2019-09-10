@@ -4,7 +4,7 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 class RegistrationRoute extends Component {
   static defaultProps = {
     history: {
-      push: () => {},
+      push: () => { },
     },
   }
 
@@ -15,15 +15,17 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section >
-        <p align="center">
-          Practice learning a language with the spaced reptition revision technique.
+      <section id='registration-section' className="grid">
+        <div className="content-wrap">
+          <p>
+            Practice learning a language with the spaced reptition revision technique.
         </p>
-        <h2 align="center">Sign up</h2>
-        <RegistrationForm
-          onRegistrationSuccess={this.handleRegistrationSuccess}
-        />
-      </section>
+          <h2>Sign up</h2>
+          <RegistrationForm
+            onRegistrationSuccess={this.handleRegistrationSuccess}
+          />
+        </div>
+      </section >
     );
   }
 }

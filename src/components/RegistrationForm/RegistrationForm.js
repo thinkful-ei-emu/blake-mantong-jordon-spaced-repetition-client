@@ -4,7 +4,7 @@ import { Input, Required, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import Button from '../Button/Button'
 import './RegistrationForm.css'
-import UserContext from   '../../contexts/UserContext.js'
+import UserContext from '../../contexts/UserContext.js'
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -49,7 +49,7 @@ class RegistrationForm extends Component {
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div className="un" type="text" align="center" placeholder="John Smith">
+        <div className="un" type="text" placeholder="John Smith">
           <Label htmlFor='registration-name-input'>
             Enter your name<Required />
           </Label> <br></br>
@@ -60,7 +60,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div className="un" type="text" align="center" placeholder="Username">
+        <div className="un" type="text" placeholder="Username">
           <Label htmlFor='registration-username-input'>
             Choose a username<Required />
           </Label>
@@ -70,7 +70,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div className="pass" type="password" align="center" placeholder="password">
+        <div className="pass" type="password" placeholder="password">
           <Label htmlFor='registration-password-input'>
             Choose a password<Required />
           </Label>
@@ -81,17 +81,13 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <footer >
-          <div>
-            <Button type='submit'>
-              Sign up
-            </Button>
-          </div>
+        <footer>
+          <Button type='submit'>
+            Sign up
+            </Button><br />
           {' '}
-          <br/>
-          <div align="center">
+          <br />
           <Link to='/login' >Already have an account?</Link>
-          </div>
         </footer>
       </form>
     )
