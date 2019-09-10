@@ -12,6 +12,10 @@
   padding-top: 40px;
 }
 
+#landing-text{
+  margin-top: 15px;
+}
+
 .pass {
 width: 76%;
 color: rgb(38, 50, 56);
@@ -31,7 +35,6 @@ font-family: 'Ubuntu', sans-serif;
 
 .un:focus, .pass:focus {
   border: 2px solid rgba(0, 0, 0, 0.18) !important;
-  
 }
 
 

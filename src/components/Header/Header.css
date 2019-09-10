@@ -1,4 +1,5 @@
 .btn{
+  text-shadow: 1px 1px 3px #fff;
   display: inline-block;
   border-radius: 5em;
     color: #fff;
@@ -29,8 +30,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: px;
+  height: 175px;
   z-index: -1;
+  opacity: 0.5;
 }
 
 #link-title{

@@ -17,9 +17,9 @@ class RegistrationRoute extends Component {
     return (
       <section id='registration-section' className="grid">
         <div className="content-wrap">
-          <p>
+          <p id="landing-text">
             Practice learning a language with the spaced reptition revision technique.
-        </p>
+        </p><hr />
           <h2>Sign up</h2>
           <RegistrationForm
             onRegistrationSuccess={this.handleRegistrationSuccess}

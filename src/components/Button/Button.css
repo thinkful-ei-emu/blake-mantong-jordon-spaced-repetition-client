@@ -11,6 +11,8 @@
     font-size: 13px;
     text-align: center;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    text-shadow: 1px 1px 3px #fff;
+
 }
 
 .Button:hover{

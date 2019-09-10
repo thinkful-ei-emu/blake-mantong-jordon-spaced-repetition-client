@@ -51,7 +51,7 @@ class LoginForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <div className="un" type="text" align="center" placeholder="Username">
-          <Label htmlFor='login-username-input'>
+          <Label htmlFor='login-username-input' className="login-labels">
             Username
           </Label>
           <Input
@@ -62,7 +62,7 @@ class LoginForm extends Component {
           />
         </div>
         <div className="pass" type="password" align="center" placeholder="password">
-          <Label htmlFor='login-password-input'>
+          <Label htmlFor='login-password-input' className="login-labels">
             Password
           </Label>
           <Input
