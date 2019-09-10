@@ -40,7 +40,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header id="header" class="grid">
+      <header id="header" className="grid">
         <div className='logo'></div>
         <div className="content-wrap">
           <h1>
