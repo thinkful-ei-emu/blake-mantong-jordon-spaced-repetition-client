@@ -3,17 +3,10 @@ import {withRouter} from 'react-router-dom';
 import UserContext from   '../../contexts/UserContext.js';
 import DashboardService from '../../services/dashboard-api-service.js';
 import ListItem from '../../components/wordList/wordListItem.js';
-import Button from '../../components/Button/Button.js';
 
 class DashboardRoute extends Component {
- 
-  
-  
   componentDidMount(){
-    
-    //let value = this.context;
-     this.fetchData()
-     
+     this.fetchData()  
   }
   fetchData(){
     DashboardService.getLanguageAndWords()
@@ -21,34 +14,37 @@ class DashboardRoute extends Component {
       this.context.setLanguage(data.language);
       this.context.setWords(data.words);
       console.log(this.context.words);
-      console.log(this.context.languageName);
+      console.log(this.context.language);
     });
   }
   renderWordList = () => {
-    return this.context.words.map(word => {
-      return <ListItem word={word}/>
+    return this.context.words.map((word, index) => {
+      return <li><ListItem word={word} key={index}/></li>
     })
   }
   redirect = (location = '/') => {
     this.props.history.push(location);
   }
+  
   render() {
-    
             return (
+              
+              
               <section>
+                
                 <div>
-                  <h3>Learn {this.context.language} !</h3>
-                </div>
+                  <h2>Learn {this.context.language.name}!</h2>
+                  <h2>Total correct answers: {this.context.language.total_score}</h2>                 
+                  <a href='/learn'>Start practicing</a>       
+                </div>              
                 <div>
-                  <p>start practicing now</p>
-                  <button onClick={this.redirect('/learn')}/>
-                </div>
-                <div>
-                  <h2>Your Words List</h2>
-                  {this.renderWordList()}
+                  <h3>Words to practice</h3>
+                  <ul>{this.renderWordList()}</ul>
                 </div>
                 
               </section>
+              
+             
             )
     
   }

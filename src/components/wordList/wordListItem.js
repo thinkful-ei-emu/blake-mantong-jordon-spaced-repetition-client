@@ -8,7 +8,14 @@ class listItem extends React.Component{
   }
 
   render(){
-    return (<div></div>);
+    const word = this.props.word;
+    return (
+      <div >
+         
+         <h4>{word.original}</h4>
+         <p>correct answer count: {word.correct_count},and incorrect answer count:{word.incorrect_count}</p>
+      </div>
+    )
   }
 
 }
