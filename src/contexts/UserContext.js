@@ -106,11 +106,9 @@ export class UserProvider extends Component {
       })
   }
   setLanguage = (languageName='') => {
-    console.log(languageName);
     this.setState({ languageName })
   }
   setWords =(words=[]) => {
-    console.log(words);
     this.setState({ words })
   }
   render() {
