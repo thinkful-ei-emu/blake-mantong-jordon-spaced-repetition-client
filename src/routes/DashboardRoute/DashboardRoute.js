@@ -38,11 +38,8 @@ class DashboardRoute extends Component {
                   <h3>Words to practice</h3>
                   <ul>{this.renderWordList()}</ul>
                 </div>               
-              </section>
-              
-             
-            )
-    
+              </section>             
+            )   
   }
 }
 DashboardRoute.contextType = LanguageContext;

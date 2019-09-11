@@ -6,23 +6,17 @@ class listItem extends React.Component{
     super(props);
     console.log(props.word);
   }
-
   render(){
     const word = this.props.word;
     
     return (
-      <div > 
-            
-         <h4>{word.original}</h4>
-         
+      <div >            
+         <h4>{word.original}</h4>        
          <p>correct answer count: {word.correct_count}</p>
-         <p>incorrect answer count: {word.incorrect_count}</p>
-         
-         
+         <p>incorrect answer count: {word.incorrect_count}</p>         
       </div>
     )
   }
-
 }
 
 export default listItem;
