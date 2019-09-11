@@ -26,7 +26,7 @@ class LearningRoute extends Component {
     return (
       <section>
         <div>
-          <h2>Translate the word: and the next word to translate is {this.state.head.nextWord}!</h2>
+          <h2>Translate the word: {this.state.head.nextWord}</h2>
           <h2>What's the translation for this word?</h2>
           <AnswerForm onSubmitSuccess={this.handleSubmitSuccess} />    
         </div>              

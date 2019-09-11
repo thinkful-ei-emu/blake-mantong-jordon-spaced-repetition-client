@@ -33,7 +33,7 @@ const DashboardService = {
      headers: {
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ answer }),
+    body: JSON.stringify( answer ),
   })
     .then(res =>
       (!res.ok)
