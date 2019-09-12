@@ -23,7 +23,7 @@ class AnswerForm extends Component {
     console.log(answer.value);
 
     DashboradApiService.postGuess({
-      answer: answer.value
+      guess: answer.value
     })
       .then(res => {
         answer.value = ''
