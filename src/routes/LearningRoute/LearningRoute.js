@@ -26,14 +26,15 @@ class LearningRoute extends Component {
     return (
       <section>
         <div>
-          <h2>Translate the word: {this.state.head.nextWord}</h2>
-          <h2>What's the translation for this word?</h2>
+          <h2>Translate the word:</h2>
+          <span>{this.state.head.nextWord}</span>
+          <p>Your total score is: {this.state.head.totalScore}</p>
           <AnswerForm onSubmitSuccess={this.handleSubmitSuccess} />    
         </div>              
         <div>
           <h3>You have answered this word correctly: {this.state.head.wordCorrectCount} times</h3>
           <h3>You have answered this word incorrectly: {this.state.head.wordIncorrectCount} times</h3>
-          <h3>Your total score is: {this.state.head.totalScore}</h3>
+          
         </div>  
       </section>
     );

@@ -47,13 +47,13 @@ class AnswerForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <div className="un" type="text" align="center" placeholder="Your answer">
-          <Label htmlFor='answer-input' className="answer">
-            Answer:
+          <Label htmlFor='learn-guess-input' className="guess">
+            What's the translation for this word?
           </Label>
           <br></br>
           <Input
             ref={this.firstInput}
-            id='answer-input'
+            id='learn-guess-input'
             name='answer'
             required
           />
