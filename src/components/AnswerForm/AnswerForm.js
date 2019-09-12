@@ -4,6 +4,7 @@ import DashboradApiService from '../../services/dashboard-api-service'
 import LanguageContext from '../../contexts/LanguageContext'
 import Button from '../Button/Button'
 import './AnswerForm.css'
+
 class AnswerForm extends Component {
   static defaultProps = {
     onSubmitSuccess: () => { }
@@ -19,6 +20,7 @@ class AnswerForm extends Component {
     ev.preventDefault()
     const { answer } = ev.target
     this.setState({ error: null })
+    console.log(answer.value);
 
     DashboradApiService.postGuess({
       answer: answer.value
@@ -57,7 +59,7 @@ class AnswerForm extends Component {
             name='answer'
             required
           />
-        </div>      
+        </div>
         <Button className="submit" align="center" type='submit'>
           Submit your answer
         </Button>
