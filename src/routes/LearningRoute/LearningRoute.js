@@ -31,11 +31,10 @@ class LearningRoute extends Component {
           <p>Your total score is: {this.state.head.totalScore}</p>
           <AnswerForm onSubmitSuccess={this.handleSubmitSuccess} />    
         </div>              
-        <div>
-          <h3>You have answered this word correctly: {this.state.head.wordCorrectCount} times</h3>
-          <h3>You have answered this word incorrectly: {this.state.head.wordIncorrectCount} times</h3>
-          
-        </div>  
+        <main>
+          <h3>You have answered this word correctly {this.state.head.wordCorrectCount} times.</h3>
+          <h3>You have answered this word incorrectly {this.state.head.wordIncorrectCount} times.</h3>   
+        </main>  
       </section>
     );
   }
