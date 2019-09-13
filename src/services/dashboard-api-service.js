@@ -22,25 +22,31 @@ const DashboardService = {
         'authorization': `Bearer ${TokenService.getAuthToken()}`,
       },
     })
-      .then(res => res.json())
-      .then(data => {
-        return data;
-      });
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
   },
-  postGuess(guess = {}) {
+  postGuess(guess) {
+    const body = JSON.stringify({
+      guess: guess
+    })
+
     return fetch(`${config.API_ENDPOINT}/language/guess`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
         'authorization': `Bearer ${TokenService.getAuthToken()}`
       },
-      body: JSON.stringify(guess),
+      body: body,
     })
       .then(res =>
         (!res.ok)
           ? res.json().then(err => Promise.reject(err))
           : res.json()
       )
+      .catch(e => console.error('Fetch guess error'))
   }
 }
 export default DashboardService;

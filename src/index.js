@@ -8,12 +8,15 @@ import './setup-icons'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ProgressProvider } from './contexts/ProgressContext'
 
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
       <LanguageProvider>
-      <App />
+        <ProgressProvider>
+          <App />
+        </ProgressProvider>
       </LanguageProvider>
     </UserProvider>
   </BrowserRouter>,
