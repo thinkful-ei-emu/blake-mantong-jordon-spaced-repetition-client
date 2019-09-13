@@ -26,8 +26,9 @@ class AnswerForm extends Component {
       guess: answer.value
     })
       .then(res => {
-        answer.value = ''
-        this.props.onSubmitSuccess()
+        //console.log(res)
+        this.props.handleAnswerSubmit(res, answer.value);
+        answer.value = '';
       })
       .catch(res => {
         this.setState({ error: res.error })
