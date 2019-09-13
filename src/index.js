@@ -9,6 +9,7 @@ import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { LanguageProvider } from './contexts/LanguageContext';
 
+
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
