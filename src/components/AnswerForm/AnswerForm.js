@@ -60,10 +60,12 @@ class AnswerForm extends Component {
             name='answer'
             required
           />
-        </div>
+          <br></br>
+          <br></br>         
         <Button className="submit" align="center" type='submit'>
           Submit your answer
         </Button>
+        </div>
       </form>
     )
   }

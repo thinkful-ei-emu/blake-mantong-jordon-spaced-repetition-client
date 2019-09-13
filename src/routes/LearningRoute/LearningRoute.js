@@ -47,18 +47,18 @@ moveToNextQuestion = () => {
               <p>Good try, but not quite right :( the correct translation for {this.state.head.nextWord} was {this.state.answerResponse.answer} and you chose {this.state.answerValue}</p>
             }
             <button onClick={()=>this.moveToNextQuestion()}>try again</button>
+            <p className = "DisplayScore">Your total score is: {this.state.head.totalScore}</p>
           </div>:
           <>
-          <div>
+          <div align="center" >
             <h2>Translate the word:</h2>
             <span>{this.state.head.nextWord}</span>
-            <p>Your total score is: {this.state.head.totalScore}</p>
+            <p className = "DisplayScore">Your total score is: {this.state.head.totalScore}</p>
             <AnswerForm handleAnswerSubmit={this.handleAnswerSubmit} onSubmitSuccess={this.handleSubmitSuccess} />    
-          </div>              
-          <main>
+          
             <h3>You have answered this word correctly {this.state.head.wordCorrectCount} times.</h3>
             <h3>You have answered this word incorrectly {this.state.head.wordIncorrectCount} times.</h3>   
-          </main>  
+          </div>  
           </>
         }
       </section>
