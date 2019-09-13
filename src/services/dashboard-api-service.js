@@ -11,9 +11,6 @@ const DashboardService = {
       },
     })
       .then(res => res.json())
-      .then(data => {
-        return data;
-      });
   },
   getHead() {
     return fetch(`${config.API_ENDPOINT}/language/head`, {
